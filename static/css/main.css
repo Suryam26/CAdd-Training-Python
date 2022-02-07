@@ -1,0 +1,82 @@
+html{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: #d3e0ee;
+}
+  
+table, th ,td{
+  border: 2px solid black;
+  border-collapse: collapse;
+  text-align: center;
+} 
+  
+th, td{
+  font-size: large;
+  padding: 10px;
+  text-align: center;
+}
+  
+.tab {
+  margin: 20px auto;
+  max-width: fit-content;
+}
+  
+h1, h2, .center {
+  text-align: center;
+}
+
+.center button {
+  max-width: fit-content;
+}
+
+a{
+  text-decoration: none;
+  font-size: medium;
+}
+
+.up{
+    color: #1055e9;
+}
+.del{
+  color: #dd142f;
+}
+
+.form-popup {
+  display:none;
+}
+
+.btn {
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin: 10px auto;
+  font-size: medium;
+}
+
+.submit {
+  background-color: #04AA6D;
+}
+
+.close {
+  background-color: #dc3545;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px auto;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: medium;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 500px;
+  border: 2px solid black;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+}

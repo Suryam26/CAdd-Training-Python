@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block body %} 
+<br/>
+<h1>Department Data</h1>
+
+<div class="center">
+    <button class="btn submit" onclick="openForm()">Add New Department</button>
+</div>
+
+<div class="container form-popup" id="myForm">
+    <form action="/dep" method="post">
+        <h2>Add New Department</h2>
+        <label>Department Name:</label>
+        <input type="text" name="name" id="name" required><br/>
+        <label>Manager ID:</label>
+        <select name="manager_id" id="manager_id" required>
+            {% for e in emp %}
+            <option value="{{e.id}}">{{ e.name }}</option>
+            {% endfor %}
+          </select>
+        <input type="submit" class="btn submit" value="Add New Department"><br/>
+        <button type="button" class="btn close" onclick="closeForm()">Close</button>
+    </form>
+</div>
+
+<table class="tab">
+    <thead>
+        <tr>
+            <th>Department Id</th>
+            <th>Department Name</th>
+            <th>Manager</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for d in department %}
+        <tr>
+            <td>{{ d.id }}</td>
+            <td>{{ d.name }}</td>
+            <td>{{ d.manager.name }}</td>
+            <td>
+                <a href="/delete/dep/{{ d.id }}" class="del">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

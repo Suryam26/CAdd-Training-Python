@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+   {% block head %} 
+   {% endblock %}
+</head>
+<body>
+    {% block body %} 
+    {% endblock %}
+    <script>
+        function openForm(){
+            if (document.getElementById("myForm").style.display === "block"){
+                document.getElementById("myForm").style.display="none";
+            }
+            else {
+                document.getElementById("myForm").style.display="block";
+            }
+        }
+        function closeForm(){
+            document.getElementById("myForm").style.display="none";
+        }
+    </script>
+</body>
+</html>
